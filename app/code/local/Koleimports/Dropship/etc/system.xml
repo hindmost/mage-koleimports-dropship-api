@@ -1,0 +1,119 @@
+<?xml version="1.0"?>
+<config>
+    <sections>
+        <catalog>
+            <groups>
+                <dropship translate="label">
+                    <label>Koleimports Dropship Settings</label>
+                    <sort_order>800</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <enable translate="label">
+                            <label>Enabled</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>1</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </enable>
+                        <api_id translate="label">
+                            <label>API Account ID</label>
+                            <comment><![CDATA[mandatory field (see <a href="http://support.koleimports.com/kb/dropship-api-documentation/api-overview" target="_blank">here</a> for details)]]></comment>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>2</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </api_id>
+                        <api_key translate="label">
+                            <label>API key</label>
+                            <comment><![CDATA[mandatory field (see <a href="http://support.koleimports.com/kb/dropship-api-documentation/api-overview" target="_blank">here</a> for details)]]></comment>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>3</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </api_key>
+                        <price_markup translate="label">
+                            <label>Import price markup</label>
+                            <comment>Price markup (%) for imported products. Leave empty to use default value</comment>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>4</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </price_markup>
+                        <import_pagesize translate="label">
+                            <label>Import page size</label>
+                            <comment>Number of items at one import page. Leave empty to use default value</comment>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>5</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </import_pagesize>
+                        <import_expire translate="label">
+                            <label>Import results expiration time</label>
+                            <comment>Time interval (in days) between two consecutive import procedures. Leave empty to use default value</comment>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>6</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </import_expire>
+                        <import_timeout translate="label">
+                            <label>Import run timeout</label>
+                            <comment>Script execution time limit (mins). 0 means no limit. Leave empty to use default value</comment>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>7</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </import_timeout>
+                        <import_show_btn translate="label">
+                            <label>Show Import Button</label>
+                            <comment>show import button at the admin's products management page</comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>8</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </import_show_btn>
+                        <cron_expr translate="label">
+                            <label>Import Cron Run Shedule</label>
+                            <comment><![CDATA[expression in <a href="http://ru.wikipedia.org/wiki/Cron" target="_blank">cron</a> format (min hour day month dayofweek). Empty value means no cron run. Edit with care!]]></comment>
+                            <frontend_type>text</frontend_type>
+                            <backend_model>dropship/config_cron</backend_model>
+                            <sort_order>9</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </cron_expr>
+                        <export_on_ordersuccess translate="label">
+                            <label>Export Event</label>
+                            <comment><![CDATA[event that trigger export procedure. &quot;Yes&quot; - order success event (completed payment), &quot;No&quot; - order submit event (payment is not guaranteed - depends on payment method)]]></comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>10</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </export_on_ordersuccess>
+                        <rsv_import_state translate="label">
+                            <label>Import state</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>15</sort_order>
+                            <show_in_default>0</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </rsv_import_state>
+                    </fields>
+                </dropship>
+            </groups>
+        </catalog>
+    </sections>  
+</config>
